@@ -7,8 +7,9 @@ import glob
 import pathlib
 import logging
 import shutil
+import tempfile
 
-LOG_FILE='/tmp/mcwrap.log'
+LOG_FILE=f'{tempfile.gettempdir()}/mcwrap.log'
 logging.getLogger().addHandler(logging.FileHandler(LOG_FILE))
 
 
